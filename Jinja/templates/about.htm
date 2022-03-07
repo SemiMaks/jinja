@@ -1,8 +1,11 @@
-{% extends 'exmain.htm' %}
+{% extends 'layout/default.tpl' %}
 
 {% block title %} О сайте {% endblock %}
 
 {% block content %}
-<h1>{{ self.title() }}</h1> 
+{% block table_contents %} {{ super() }} {% endblock %}
+<h1>{{ self.title() }}</h1>
 <p> Новый сайт, его нужно доделать.</p>
 {% endblock %}
+
+{% block item %}<p class="item">{{ super() }}</p>{% endblock %}
